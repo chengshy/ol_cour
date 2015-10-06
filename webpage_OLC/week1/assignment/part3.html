@@ -2,6 +2,25 @@
 <html>
 <head>
 <meta name="author" content="Shangyi Cheng">
+<style>
+fieldset {background:lightyellow;
+  border:10px solid yellow;
+  margin-bottom:10px;
+  width:720px}
+label {width:180px;
+  display:inline-block;
+  text-align:right;
+  text-align:top}
+.checkbox {width:auto}
+.rl {background:red}
+.rr {background:purple}
+.center {text-align:center}
+textarea {width:360px;
+  height:50px}
+label:hover {font-size:40px}
+input:hover {font-size:40px}
+</style>
+<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
 </head>
 <body>
 <h1>Please Enter Your Details For Our Dating Website!</h1>
@@ -11,15 +30,15 @@
     <label for="face_img">Your image:</label>
     <input type="file" name="face_img" required><br>
     <label for="img_show">Image preview:</label>
-    <img src="face_img" id="preview"><br>
+    <img id="preview"><br>
   </fieldset><br>
   <fieldset>
     <legend>Your General Details</legend>
     <label for="fullname">Name:</label>
     <input type="text" name="fullname" placeholder="Your full name" required><br>
     <label for="gender">Gender:</label>
-    <input type="radio" name="gender" value="Male" required><label>Male</label>
-    <input type="radio" name="gender" value="Female" required><label>Female</label><br>
+    <input type="radio" name="gender" value="Male" required><label class="checkbox">Male</label>
+    <input type="radio" name="gender" value="Female" required><label class="checkbox">Female</label><br>
     <label for="age">Age:</label>
     <input type="number" name="age" placeholder="18" required><br>
     <label for="data_of_birth">Date of birth:</label>
@@ -39,13 +58,13 @@
   <fieldset>
     <legend>Your Indicators</legend>
     <label for="height">Height:</label>
-    <label>Short</label>
+    <label class="center rl">Short</label>
     <input type="range" min="0" max="100" step="5" value="50" name="height">
-    <label>Tall</label><br>
+    <label class="center rr">Tall</label><br>
     <label for="salary">Salary:</label>
-    <label>Poor</label>
+    <label class="center rl">Poor</label>
     <input type="range" min-"0" max="100" step="5" value="50" name="salary">
-    <label>Rich</label><br>
+    <label class="center rr">Rich</label><br>
   </fieldset><br>
   <fieldset>
     <legend>Your Contact Information</legend>
@@ -54,11 +73,11 @@
     <label for="mobile">Mobile:</label>
     <input type="tel" name="mobile"><br>
     <label for="address">Address:</label>
-    <textarea rows="3" cols="6" name="address"></textarea><br>
+    <textarea name="address"></textarea><br>
     <label for="method">Method to contact you:</label>
-    <input type="checkbox" name="method" value="Email"><label>Email</label>
-    <input type="checkbox" name="method" value="Whatsapp"><label>Whatsapp</label>
-    <input type="checkbox" name="method" value="In-app chat"><label>In-app chat</label><br>
+    <input type="checkbox" name="method" value="Email"><label class="checkbox">Email</label>
+    <input type="checkbox" name="method" value="Whatsapp"><label class="checkbox">Whatsapp</label>
+    <input type="checkbox" name="method" value="In-app chat"><label class="checkbox">In-app chat</label><br>
   </fieldset><br>
   <input type="submit" value="Submit!"><br>
 </form>
